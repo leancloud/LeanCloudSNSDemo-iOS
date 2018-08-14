@@ -18,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+
+    
 }
 //使用 Auth Data 登录或注册 AVUser，以微信登录为例。
 - (IBAction)weixinLogin:(id)sender {
@@ -79,6 +80,7 @@
 }
 //将 Auth Data 绑定到现有的 AVUser。
 - (IBAction)associateWeixin:(id)sender {
+    
     //已经注册过用户名为 Tom 的用户
     //    AVUser *user = [AVUser user];
     //    user.username = @"Tom";

@@ -26,14 +26,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     [self initShareSDK];
-    //SNS
     
-    //     [AVOSCloud setApplicationId:@"I94is3iS8CzyLsY4lmYz2HjT-gzGzoHsz" clientKey:@"yDObYfeTC9Y0e1aqT7nrWJgu"];
-    
-    //Swift 项目
-    [AVOSCloud setApplicationId:@"1gNN5OsfFybFHGwuNBdjWXIb-gzGzoHsz" clientKey:@"WRwNb6IPgTXcK2LpBMwSECb5"];
+    [AVOSCloud setApplicationId:@"I94is3iS8CzyLsY4lmYz2HjT-gzGzoHsz" clientKey:@"yDObYfeTC9Y0e1aqT7nrWJgu"];
     
     return YES;
 }
