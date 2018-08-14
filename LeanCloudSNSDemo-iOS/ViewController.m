@@ -18,17 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //注册
-    AVUser *user = [AVUser user];
-    user.username = @"Tom";
-    user.password =  @"123";
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // 注册成功
-        } else {
-            // 失败的原因可能有多种，常见的是用户名已经存在。
-        }
-    }];
+  
 }
 //使用 Auth Data 登录或注册 AVUser，以微信登录为例。
 - (IBAction)weixinLogin:(id)sender {
@@ -49,7 +39,6 @@
              [newUser loginWithAuthData:user.credential.rawData platformId:LeanCloudSocialPlatformWeiXin options:option callback:^(BOOL succeeded, NSError * _Nullable error) {
                  if (succeeded) {
                      NSLog(@"微信登录成功");
-                     
                  }
              }];
          }else{
@@ -75,11 +64,11 @@
              option.platform = LeanCloudSocialPlatformWeiXin;
              option.unionId = @"unionid";
              option.isMainAccount = true;
-             //platformId 可自行设置，例如此处的 wxminiprogram 是标记为小程序登录，其他方式登陆 platformId 可自定义设置。
+             //只要是同一个微信开放平台帐号下的公众号，用户的 UnionID 是唯一的。
+             //所以下面的参数 platformId 用于区分相同 UnionID 登陆的不同公众平台。例如此处的 wxminiprogram 是标记为小程序使用 UnionID 登录。参数 platformId 的值可自定义。
              [currentuser loginWithAuthData:user.credential.rawData platformId:@"wxminiprogram" options:option callback:^(BOOL succeeded, NSError * _Nullable error) {
                  if (succeeded) {
                      NSLog(@"登录成功");
-                     
                  }
              }];
          }else{
@@ -90,8 +79,19 @@
 }
 //将 Auth Data 绑定到现有的 AVUser。
 - (IBAction)associateWeixin:(id)sender {
-   
-    //已经登录的用户 Tom 绑定微信
+    //已经注册过用户名为 Tom 的用户
+    //    AVUser *user = [AVUser user];
+    //    user.username = @"Tom";
+    //    user.password =  @"123";
+    //    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    //        if (succeeded) {
+    //            // 注册成功
+    //        } else {
+    //            // 失败的原因可能有多种，常见的是用户名已经存在。
+    //        }
+    //    }];
+    
+    //已经登录的用户 Tom 去绑定微信
     [AVUser logInWithUsernameInBackground:@"Tom" password:@"123" block:^(AVUser *user, NSError *error) {
         if (user != nil) {
             NSLog(@"%@ 登录成功",user.username);
@@ -116,7 +116,6 @@
              [userTom associateWithAuthData:user.credential.rawData platformId:LeanCloudSocialPlatformWeiXin options:option callback:^(BOOL succeeded, NSError * _Nullable error) {
                  if (succeeded) {
                      NSLog(@"绑定微信成功");
-                     
                  }
              }];
          }else{
