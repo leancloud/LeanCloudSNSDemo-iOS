@@ -58,16 +58,17 @@
          if (state == SSDKResponseStateSuccess)
          {
              // 由 ShareSDK 返回的数据，user.credential.rawData 即 Auth Data;
-             NSLog(@"AuthData=%@",user.credential.rawData);
-             
+             NSDictionary *authData = user.credential.rawData;
+             NSLog(@"authData=%@",authData);
+
              AVUser *currentuser = [AVUser user];
              AVUserAuthDataLoginOption *option = [AVUserAuthDataLoginOption new];
              option.platform = LeanCloudSocialPlatformWeiXin;
-             option.unionId = @"unionid";
+             option.unionId = authData[@"unionid"];
              option.isMainAccount = true;
              //只要是同一个微信开放平台帐号下的公众号，用户的 UnionID 是唯一的。
              //所以下面的参数 platformId 用于区分相同 UnionID 登陆的不同公众平台。例如此处的 wxminiprogram 是标记为小程序使用 UnionID 登录。参数 platformId 的值可自定义。
-             [currentuser loginWithAuthData:user.credential.rawData platformId:@"wxminiprogram" options:option callback:^(BOOL succeeded, NSError * _Nullable error) {
+             [currentuser loginWithAuthData:authData platformId:@"wxminiprogram" options:option callback:^(BOOL succeeded, NSError * _Nullable error) {
                  if (succeeded) {
                      NSLog(@"登录成功");
                  }
