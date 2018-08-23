@@ -27,11 +27,11 @@ AuthData 需要从微信官方提供的 SDK 获取到，或者使用第三方提
 
 Demo 运行效果如下图所示：
 <div  align="center">    
-<img src="http://lc-1gNN5Osf.cn-n1.lcfile.com/2fa259ce810472edb94f.png" style="zoom:80%" />
+<img src="http://lc-i94is3is.cn-n1.lcfile.com/1fa2d289a4ed7e70dd45.png" style="zoom:80%" />
 </div>
 
 
-Demo 中一共演示下面三种情况，更多的使用细节请参考文档。
+Demo 中一共演示下面四种情况，更多的使用细节请参考文档。
 
 ### 1.微信 AuthData 登录
 
@@ -42,4 +42,7 @@ Demo 中一共演示下面三种情况，更多的使用细节请参考文档。
 
 ### 3.LeanCloud 用户绑定微信
 演示已经登录的 AVUser 如何绑定微信。
+
+### 4.解绑微信
+演示已经绑定微信的用户如何取消绑定。
 
