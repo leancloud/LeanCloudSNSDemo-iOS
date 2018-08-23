@@ -39,10 +39,19 @@
                                     <action selector="associateWeixin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CvY-3H-bHu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHT-40-UAe">
+                                <rect key="frame" x="156" y="299" width="62" height="30"/>
+                                <state key="normal" title="解绑微信"/>
+                                <connections>
+                                    <action selector="disAssociateWeixin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klu-1o-G8a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AHT-40-UAe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dil-YP-6eb"/>
                             <constraint firstItem="bWv-a0-pZP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="IPw-wE-rgJ"/>
+                            <constraint firstItem="AHT-40-UAe" firstAttribute="top" secondItem="hJf-xU-eax" secondAttribute="bottom" constant="35" id="PeH-jm-6xG"/>
                             <constraint firstItem="bWv-a0-pZP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qge-YW-HhE"/>
                             <constraint firstItem="hJf-xU-eax" firstAttribute="top" secondItem="H1T-OV-1Pz" secondAttribute="bottom" constant="35" id="Tqp-Ai-BDq"/>
                             <constraint firstItem="H1T-OV-1Pz" firstAttribute="centerX" secondItem="bWv-a0-pZP" secondAttribute="centerX" id="XJT-t1-Zs2"/>
@@ -54,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="-46"/>
+            <point key="canvasLocation" x="-708" y="-68"/>
         </scene>
     </scenes>
 </document>

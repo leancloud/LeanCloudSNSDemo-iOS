@@ -126,4 +126,25 @@
          }
      }];
 }
+//微信解绑
+- (IBAction)disAssociateWeixin:(id)sender {
+    
+    //解绑时需要获取到当前登录的用户，并且已经绑定了微信。
+    AVUser *user = [AVUser currentUser];
+    if(user == nil){
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"需要先绑定微信" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }else{
+        //根据 Platform 的名称解绑，例如绑定时传入的 PlatformId = LeanCloudSocialPlatformWeiXin
+        [user disassociateWithPlatformId:LeanCloudSocialPlatformWeiXin callback:^(BOOL succeeded, NSError * _Nullable error) {
+            if (succeeded) {
+                NSLog(@"微信解绑成功");
+            }
+        }];
+    }
+}
+
+
 @end
