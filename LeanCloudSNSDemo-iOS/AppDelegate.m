@@ -29,7 +29,7 @@
     
     [self initShareSDK];
     
-    [AVOSCloud setApplicationId:@"I94is3iS8CzyLsY4lmYz2HjT-gzGzoHsz" clientKey:@"yDObYfeTC9Y0e1aqT7nrWJgu"];
+    [AVOSCloud setApplicationId:@"I94is3iS8CzyLsY4lmYz2HjT-gzGzoHsz" clientKey:@"yDObYfeTC9Y0e1aqT7nrWJgu"serverURLString:@"https://i94is3is.lc-cn-n1-shared.com"];
     
     return YES;
 }

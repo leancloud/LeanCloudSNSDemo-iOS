@@ -1,14 +1,14 @@
 PODS:
-  - AVOSCloud (11.3.0)
-  - AVOSCloudIM (11.3.0):
-    - AVOSCloud (= 11.3.0)
-    - AVOSCloudIM/_ARC (= 11.3.0)
-    - AVOSCloudIM/_NOARC (= 11.3.0)
-  - AVOSCloudIM/_ARC (11.3.0):
-    - AVOSCloud (= 11.3.0)
-    - AVOSCloudIM/_NOARC (= 11.3.0)
-  - AVOSCloudIM/_NOARC (11.3.0):
-    - AVOSCloud (= 11.3.0)
+  - AVOSCloud (12.3.0)
+  - AVOSCloudIM (12.3.0):
+    - AVOSCloud (= 12.3.0)
+    - AVOSCloudIM/_ARC (= 12.3.0)
+    - AVOSCloudIM/_NOARC (= 12.3.0)
+  - AVOSCloudIM/_ARC (12.3.0):
+    - AVOSCloud (= 12.3.0)
+    - AVOSCloudIM/_NOARC (= 12.3.0)
+  - AVOSCloudIM/_NOARC (12.3.0):
+    - AVOSCloud (= 12.3.0)
   - mob_sharesdk (4.1.3):
     - mob_sharesdk/ShareSDK (= 4.1.3)
     - MOBFoundation
@@ -26,19 +26,26 @@ PODS:
   - MOBFoundation (3.1.6)
 
 DEPENDENCIES:
-  - AVOSCloud (= 11.3.0)
-  - AVOSCloudIM (= 11.3.0)
+  - AVOSCloud (= 12.3.0)
+  - AVOSCloudIM (= 12.3.0)
   - mob_sharesdk
   - mob_sharesdk/ShareSDKPlatforms/QQ
   - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
   - mob_sharesdk/ShareSDKPlatforms/WeChat
 
+SPEC REPOS:
+  trunk:
+    - AVOSCloud
+    - AVOSCloudIM
+    - mob_sharesdk
+    - MOBFoundation
+
 SPEC CHECKSUMS:
-  AVOSCloud: 6b3711de627beb1a26232b496a2822d713e3b8d5
-  AVOSCloudIM: b91c0f48633cae710a69f73a275cd42fd1676ef0
+  AVOSCloud: bed104accc6fc53c3d16c3f52c8dfdff02251898
+  AVOSCloudIM: 65a95dae11b676b629da7e7b09fe3adea33cc8ad
   mob_sharesdk: 78acada345f61bd1c9d6a4a85a7eb9f19bc1c345
   MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
 
-PODFILE CHECKSUM: 5a903e3615c2f383f0b898d7c70e40539ea13327
+PODFILE CHECKSUM: 6a44c35b1de5fff21b53e0e4f2c1fb09354c16c3
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.9.3

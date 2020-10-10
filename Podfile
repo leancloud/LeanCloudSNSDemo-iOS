@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 
 target 'LeanCloudSNSDemo-iOS' do
- pod 'AVOSCloud', '11.3.0’
- pod 'AVOSCloudIM', '11.3.0’
+ pod 'AVOSCloud', '12.3.0’
+ pod 'AVOSCloudIM', '12.3.0’
  
  pod 'mob_sharesdk'
  pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
